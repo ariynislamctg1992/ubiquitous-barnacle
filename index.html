@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A quick, cheerful random joke generator." />
+    <title>Joke Jar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="hero" aria-labelledby="page-title">
+        <div class="brand-mark" aria-hidden="true">✦</div>
+        <p class="eyebrow">A little joy, on demand</p>
+        <h1 id="page-title">Joke Jar</h1>
+        <p class="intro">Need a laugh? Crack open a fresh joke from the internet.</p>
+      </section>
+
+      <section class="joke-card" aria-live="polite" aria-atomic="true">
+        <div class="card-topline">
+          <span class="pill">Random joke</span>
+          <span class="category" id="category">Ready when you are</span>
+        </div>
+        <div class="joke-content" id="joke-content">
+          <p class="placeholder">Your next laugh is just a click away.</p>
+        </div>
+        <p class="error-message" id="error-message" role="alert" hidden></p>
+        <div class="card-actions">
+          <button class="primary-button" id="new-joke" type="button">
+            <span class="button-icon" aria-hidden="true">↻</span>
+            Tell me a joke
+          </button>
+          <button class="icon-button" id="copy-joke" type="button" aria-label="Copy joke" title="Copy joke" disabled>
+            <span aria-hidden="true">⧉</span>
+          </button>
+        </div>
+      </section>
+
+      <p class="credit">Powered by <a href="https://jokeapi.dev/" target="_blank" rel="noreferrer">JokeAPI</a> · Safe for work</p>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
